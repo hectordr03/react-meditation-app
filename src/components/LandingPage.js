@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Box } from "@chakra-ui/core";
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -32,11 +33,10 @@ class LandingPage extends React.Component {
     render() {
         return (
             <div className="LandingPage">
-                <h3>This is the landing page</h3>
-                <div className='quote'>
-                    <p>{this.state.quote}</p>
-                    <p>{this.state.author}</p>
-                </div>
+                <Box className='quote'>
+                    <p>"{this.state.quote}"</p>
+                    <p>- {this.state.author}</p>
+                </Box>
             </div>
         )
     }
