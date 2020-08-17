@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 function App() {
   return (
     <div className="App">
-      <h1>This will be my mediation app</h1>
+      <h4>Navbar will go up here</h4>
       <LandingPage />
     </div>
   );
