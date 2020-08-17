@@ -24,12 +24,21 @@
 }
 
 .quote{
+  border: 2px solid black;
   border-radius: 10px;
-  background-color: #fefae085;
-  max-height: 100%;
-  max-width: 100%;
+  background-color: #606c389c;
+  max-height: auto;
+  max-width: 60%;
   font-size: 25px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 3em;
 }
 /* End of Landing Page styling */
+
+/* Meditate page styling */
+.Meditate{
+  height: 90vh;
+  width: auto;
+}
+
+/* End of Meditate page styling */
