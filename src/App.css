@@ -42,3 +42,11 @@
 }
 
 /* End of Meditate page styling */
+
+button {
+  border: none;
+  width: 40px;
+  height: 20px;
+  background-color: blue;
+  cursor: pointer;
+}
