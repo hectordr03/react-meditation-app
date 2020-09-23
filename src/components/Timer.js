@@ -45,17 +45,27 @@ class Timer extends React.Component {
     this.setState({
       time: 0,
       start: 0,
-      seconds: 0
+      seconds: 0,
     });
     console.log("reset");
   };
 
+
+  // Minute should update every 60 seconds
   render() {
+    let second = this.state.seconds;
+    let minute = 0;
+    let time = <p>
+        {minute}:{second}
+    </p>
     return (
       <div className="Timer">
         <h4>How long would you like to meditate for?</h4>
         {/* <button >+</button> */}
         <p>Time: {this.state.seconds}</p>
+        <p>
+          Time: {minute}:{second}
+        </p>
         {/* <button >-</button> */}
         <button onClick={this.startTimer}>Start Timer</button>
         <button onClick={this.stopTimer}>Stop Timer</button>
