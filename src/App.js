@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './assets/styles/timerStyles.css'
 import LandingPage from './components/LandingPage';
 import Meditate from './components/Meditate';
 

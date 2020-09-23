@@ -47,12 +47,12 @@
   font-size: 30px;
 }
 
-button {
+/* button {
   border: none;
   margin: 5px;
-  /* width: 40px; */
-  /* height: 20px; */
+  width: 40px;
+  height: 20px;
   background-color: blue;
   cursor: pointer;
   font-size: 30px;
-}
+} */

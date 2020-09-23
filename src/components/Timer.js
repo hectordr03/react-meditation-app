@@ -7,6 +7,7 @@ class Timer extends React.Component {
     this.state = {
       time: 0,
       start: 0,
+      seconds: 0,
     };
 
     this.startTimer = this.startTimer.bind(this);
@@ -17,7 +18,7 @@ class Timer extends React.Component {
   // Timer is sourced from "https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553"
 
   // Timer counts just seconds as of now
-  // *** Bug: Start button can be pressed multiple times resulting in weird behavior
+  // *** Bug: Start button can be pressed multiple times and stacking timer function.
   startTimer = () => {
     this.setState({
       time: this.state.time,
@@ -27,10 +28,11 @@ class Timer extends React.Component {
       () =>
         this.setState({
           time: Date.now() - this.state.start,
+          seconds: this.state.seconds + 1,
         }),
       1000
     );
-    console.log("Timer started");
+    console.log("start");
   };
 
   stopTimer() {
@@ -43,8 +45,9 @@ class Timer extends React.Component {
     this.setState({
       time: 0,
       start: 0,
+      seconds: 0
     });
-    console.log("Timer reset");
+    console.log("reset");
   };
 
   render() {
@@ -52,7 +55,7 @@ class Timer extends React.Component {
       <div className="Timer">
         <h4>How long would you like to meditate for?</h4>
         {/* <button >+</button> */}
-        <p>Time: {this.state.time}</p>
+        <p>Time: {this.state.seconds}</p>
         {/* <button >-</button> */}
         <button onClick={this.startTimer}>Start Timer</button>
         <button onClick={this.stopTimer}>Stop Timer</button>
