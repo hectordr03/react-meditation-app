@@ -15,6 +15,9 @@ class Timer extends React.Component {
   }
 
   // Timer is sourced from "https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553"
+
+  // Timer counts just seconds as of now
+  // *** Bug: Start button can be pressed multiple times resulting in weird behavior
   startTimer = () => {
     this.setState({
       time: this.state.time,
