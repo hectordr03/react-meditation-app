@@ -1,0 +1,17 @@
+.Timer {
+  button {
+      background-color: blue;
+      color: white;
+      font-weight: 900;
+      font-size: 15px;
+      height: 4em;
+      width: 8em;
+      margin: 3px;
+      border-radius: 5px;
+      &:hover {
+          cursor: pointer;
+          background-color: lightblue;
+          color: black
+      }
+  }
+}
