@@ -22,10 +22,6 @@ class LandingPage extends React.Component {
                     quote: res.data[randomNum].text,
                     author: res.data[randomNum].author
                 })
-                // console.log(randomNum);
-                console.log(this.state.info);
-                console.log(this.state.quote);
-                console.log(this.state.author);
             })
             .catch(err => console.log(err.message))
     }

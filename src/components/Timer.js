@@ -1,60 +1,61 @@
-import React from 'react';
-
-
+import React from "react";
 
 class Timer extends React.Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            timerStart: false,
-            minutes: 5,
-            seconds: 0,
-        }
-    }
+    this.state = {
+      time: 0,
+      start: 0,
+    };
 
-    startTimer() {
+    this.startTimer = this.startTimer.bind(this);
+    this.stopTimer = this.stopTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
+  }
+
+  startTimer = () => {
+    this.setState({
+      time: this.state.time,
+      start: Date.now() - this.state.time,
+    });
+    this.timer = setInterval(
+      () =>
         this.setState({
-            timerStart: true,
-        }, console.log(`State of timer => ${this.state.timerStart}`))
-    }
+          time: Date.now() - this.state.start,
+        }),
+      1000
+    );
+    console.log("Timer started");
+  };
 
-    stopTimer() {
-        this.setState({
-            timerStart: false,
-        }, console.log(`State of timer => ${this.state.timerStart}`))
-    }
+  stopTimer() {
+    clearInterval(this.timer);
+    console.log("stop");
+  }
 
-    addMin() {
-        let minCount = this.state.minutes;
-        this.setState({
-            minutes: minCount + 1,
-        })
-    }
+  resetTimer = () => {
+    clearInterval(this.timer);
+    this.setState({
+      time: 0,
+      start: 0,
+    });
+    console.log("Timer reset");
+  };
 
-    minusMin() {
-        let minCount = this.state.minutes;
-        this.setState({
-            minutes: minCount - 1,
-        })
-    }
-
-    timer() {
-        
-    }
-
-    render() {
-        return (
-            <div className='Timer'>
-                <h4>How long would you like to meditate for?</h4>
-                <button onClick={() => this.addMin()}>+</button>
-                <p>Minutes: {this.state.minutes}:{this.state.seconds}</p>
-                <button onClick={(() => this.minusMin())}>-</button>
-                <button onClick={() => this.startTimer()}>Start Timer</button>
-                <button onClick={() => this.stopTimer()}>Stop Timer</button>
-            </div >
-        )
-    }
+  render() {
+    return (
+      <div className="Timer">
+        <h4>How long would you like to meditate for?</h4>
+        {/* <button >+</button> */}
+        <p>Time: {this.state.time}</p>
+        {/* <button >-</button> */}
+        <button onClick={this.startTimer}>Start Timer</button>
+        <button onClick={this.stopTimer}>Stop Timer</button>
+        <button onClick={this.resetTimer}>Reset Timer</button>
+      </div>
+    );
+  }
 }
 
 export default Timer;
