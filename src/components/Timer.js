@@ -14,6 +14,7 @@ class Timer extends React.Component {
     this.resetTimer = this.resetTimer.bind(this);
   }
 
+  // Timer is sourced from "https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553"
   startTimer = () => {
     this.setState({
       time: this.state.time,
