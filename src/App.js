@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
-import './assets/styles/timerStyles.css'
-import LandingPage from './components/LandingPage';
-import Meditate from './components/Meditate';
+import classes from './App.module.css';
+import LandingPage from './components/LandingPage/LandingPage'
+import Meditate from './components/Meditate/Meditate';
 
 function App() {
   return (
-    <div className="App">
+    <div className={ classes.App }>
       <h4>Navbar will go up here</h4>
       <LandingPage />
       <Meditate />

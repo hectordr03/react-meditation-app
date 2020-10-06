@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Box } from "@chakra-ui/core";
+import classes from './LandingPage.module.css';
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -28,8 +29,8 @@ class LandingPage extends React.Component {
 
     render() {
         return (
-            <div className="LandingPage">
-                <Box className='quote'>
+            <div className={ classes.LandingPage }>
+                <Box className={ classes.quote }>
                     <p>"{this.state.quote}"</p>
                     <p>- {this.state.author}</p>
                 </Box>

@@ -1,0 +1,24 @@
+.LandingPage {
+	height: 90vh;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Photo by Nandhu Kumar from Pexels */
+	background-image: url('/src/images/landingpage-background.jpg');
+	// background-position: center;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+}
+
+.quote {
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: #7b884faa;
+	max-height: auto;
+	max-width: 60%;
+    padding: 3em;
+    font-family: BetterTomorrow;  
+    font-size: 3em;  
+}
