@@ -1,7 +1,16 @@
+// Fonts
 @font-face {
-	font-family: Better\Tomorrow;
+	font-family: BetterTomorrow;
 	src: url('./assets/fonts/Better\ Tomorrow.ttf');
+	//* Source: https://www.1001freefonts.com/better-tomorrow.font
 }
+
+@font-face {
+	font-family: StayHigh;
+	src: url('./assets/fonts/Stay\ High.ttf');
+	//* Source: https://www.1001freefonts.com/stay-high.font
+}
+// End of Fonts
 
 * {
 	padding: 0;
