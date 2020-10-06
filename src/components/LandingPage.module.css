@@ -11,18 +11,16 @@
       -ms-flex-align: center;
           align-items: center;
   /* Photo by Nandhu Kumar from Pexels */
-  background-image: url("/src/images/landingpage-background.jpg");
+  background: url("../assets/images/rocks-balance.jpg") center fixed no-repeat;
+  background-size: cover;
 }
 
 .quote {
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #7b884faa;
   max-height: auto;
-  max-width: 60%;
-  padding: 3em;
+  max-width: 50%;
   font-family: BetterTomorrow;
-  font-size: 3em;
-  font-weight: 500;
+  font-size: 3.5em;
+  font-weight: 550;
+  color: white;
 }
 /*# sourceMappingURL=LandingPage.module.css.map */

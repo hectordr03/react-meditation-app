@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './App.module.css';
-import LandingPage from './components/LandingPage/LandingPage'
-import Meditate from './components/Meditate/Meditate';
+import LandingPage from './components/LandingPage'
+import Meditate from './components/Meditate';
 
 function App() {
   return (
