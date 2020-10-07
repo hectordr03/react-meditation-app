@@ -1,0 +1,46 @@
+.Breath {
+    font-family: StayHigh;
+    height: 80vh;
+    width: auto;
+    // display: flex;
+    // flex-flow: column wrap;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.boxGroup {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box1 {
+    height: 20em;
+    width: 20em;
+    background-color: salmon;
+    transform: translate(0, 0);
+}
+
+.box2 {
+    height: 20em;
+    width: 20em;
+    background-color: lightblue;
+    border: 2px solid gray;
+    transform: translate(0, 0);
+}
+
+.box3 {
+    height: 20em;
+    width: 20em;
+    background-color: lightgreen;
+    transform: translate(0, 0);
+}
+
+// .message {
+//     background-color: orange;
+//     height: 20em;
+//     width: 40em;
+// }
+
+@keyframes {
+
+}
