@@ -30,13 +30,13 @@
 	//? Testing animations
 	&:hover {
         //! animation prop == animation: name, duration, timing-function, delay, iteration count, direction, fill-mode, play-state
-        animation: inhale 4s;
-        animation: hold 7s, 4s;
-        animation: exhale 8s, 7s;
-		// animation-name: inhale, hold, exhale;
-		// animation-delay: 0s, 4s, 7s;
-        // animation-duration: 4s, 7s, 8s;
-        // animation-iteration-count: infinite;
+        // animation: inhale 4s;
+        // animation: hold 7s, 4s;
+        // animation: exhale 8s, 7s;
+		animation-name: inhale, hold, exhale;
+		animation-delay: 0s, 4s, 7s;
+        animation-duration: 4s, 7s, 8s;
+        animation-iteration-count: infinite;
 	}
 }
 
@@ -61,11 +61,11 @@
 
 @keyframes hold {
     from {
-        transform: scale(1.2);
+		transform: scale(1.2);
     }
 
     to {
-        transform: scale(1.2);
+		transform: scale(1.2);
     }
 }
 
