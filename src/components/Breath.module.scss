@@ -18,6 +18,12 @@
 	width: 20em;
 	background-color: salmon;
 	transform: translate(0, 0);
+
+	&:hover {
+		animation-name: boxBreath;
+		animation-duration: 16s;
+		animation-iteration-count: infinite;
+	}
 }
 
 .box2 {
@@ -27,17 +33,11 @@
 	border: 2px solid gray;
 	transform: translate(0, 0);
 
-	//? Testing animations
-	&:hover {
-        //! animation prop == animation: name, duration, timing-function, delay, iteration count, direction, fill-mode, play-state
-        // animation: inhale 4s;
-        // animation: hold 7s, 4s;
-        // animation: exhale 8s, 7s;
-		animation-name: inhale, hold, exhale;
-		animation-delay: 0s, 4s, 7s;
-        animation-duration: 4s, 7s, 8s;
-        animation-iteration-count: infinite;
-	}
+	// &:hover {
+	// 	animation-name: inhale, hold, exhale;
+	// 	animation-duration: 4s, 7s, 8s;
+	// 	animation-delay: 0s, 4s, 11s;
+	// }
 }
 
 .box3 {
@@ -54,19 +54,22 @@
 // }
 
 @keyframes inhale {
+	from {
+		transform: scale(1);
+	}
 	to {
 		transform: scale(1.2);
 	}
 }
 
 @keyframes hold {
-    from {
+	from {
 		transform: scale(1.2);
-    }
+	}
 
-    to {
+	to {
 		transform: scale(1.2);
-    }
+	}
 }
 
 @keyframes exhale {
@@ -74,6 +77,21 @@
 		transform: scale(1.2);
 	}
 	to {
-		transform: scale(0.85);
+		transform: scale(1);
+	}
+}
+
+@keyframes boxBreath {
+	25%{
+		transform: scale(1.2);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	75%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1);
 	}
 }

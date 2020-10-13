@@ -21,6 +21,15 @@
           transform: translate(0, 0);
 }
 
+.box1:hover {
+  -webkit-animation-name: boxBreath;
+          animation-name: boxBreath;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .box2 {
   height: 20em;
   width: 20em;
@@ -28,15 +37,6 @@
   border: 2px solid gray;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-}
-
-.box2:hover {
-  -webkit-animation: inhale 4s;
-          animation: inhale 4s;
-  -webkit-animation: hold 7s, 4s;
-          animation: hold 7s, 4s;
-  -webkit-animation: exhale 8s, 7s;
-          animation: exhale 8s, 7s;
 }
 
 .box3 {
@@ -48,6 +48,10 @@
 }
 
 @-webkit-keyframes inhale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
   to {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -55,6 +59,10 @@
 }
 
 @keyframes inhale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
   to {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -89,8 +97,8 @@
             transform: scale(1.2);
   }
   to {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -100,8 +108,46 @@
             transform: scale(1.2);
   }
   to {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes boxBreath {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes boxBreath {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 /*# sourceMappingURL=Breath.module.css.map */

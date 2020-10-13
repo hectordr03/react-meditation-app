@@ -2,9 +2,9 @@ import React from 'react';
 import classes from './Breath.module.css';
 
 const Breath = () => {
-	const relaxingBreath = (e) => {
-		let counter = 0;
-	};
+	// const relaxingBreath = (e) => {
+	// 	let counter = 0;
+	// };
 	return (
 		<div className={classes.Breath}>
 			<h1>Breath component</h1>
